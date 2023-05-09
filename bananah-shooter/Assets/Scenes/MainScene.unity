@@ -1716,7 +1716,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: tempel_assed_version01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1081422694252076467, guid: 6cf612ba26f894f5b874908ea1266ed0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6cf612ba26f894f5b874908ea1266ed0, type: 3}
 --- !u!4 &1935557591 stripped
 Transform:
