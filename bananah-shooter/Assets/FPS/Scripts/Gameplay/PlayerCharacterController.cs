@@ -4,9 +4,14 @@ using UnityEngine.Events;
 
 namespace Unity.FPS.Gameplay
 {
+
+    
     [RequireComponent(typeof(CharacterController), typeof(PlayerInputHandler), typeof(AudioSource))]
     public class PlayerCharacterController : MonoBehaviour
     {
+
+
+
         [Header("References")] [Tooltip("Reference to the main camera used for the player")]
         public Camera PlayerCamera;
 
@@ -16,6 +21,7 @@ namespace Unity.FPS.Gameplay
         [Header("General")] [Tooltip("Force applied downward when in the air")]
         public float GravityDownForce = 20f;
 
+       
         [Tooltip("Physic layers checked to consider the player grounded")]
         public LayerMask GroundCheckLayers = -1;
 
@@ -164,6 +170,7 @@ namespace Unity.FPS.Gameplay
             m_Controller.enableOverlapRecovery = true;
 
             m_Health.OnDie += OnDie;
+            
 
             // force the crouch state to false when starting
             SetCrouchingState(false, true);
@@ -172,6 +179,12 @@ namespace Unity.FPS.Gameplay
 
         void Update()
         {
+            
+            
+            //PauseMenuScript pauseManager;
+           // pauseManager = GetComponent<PauseMenuScript>();
+            //Debug.Log(pauseManager);
+            //if(!PauseMenuScript.isPaused){
             // check for Y kill
             if (!IsDead && transform.position.y < KillHeight)
             {
@@ -214,6 +227,9 @@ namespace Unity.FPS.Gameplay
             UpdateCharacterHeight(false);
 
             HandleCharacterMovement();
+            
+
+           // }
         }
 
         void OnDie()

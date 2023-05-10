@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
-
+      public  bool isPaused;
     public GameObject pauseMenu;
-    public static bool isPaused;
+
+  
+
+    
+//GameObject Player;
+
     // Start is called before the first frame update
     void Start()
     {
         pauseMenu.SetActive(false);
+     //   Player = GameObject.find("Player");
         
     }
 
@@ -33,6 +39,7 @@ public class PauseMenuScript : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        //Player.PlayerInputHandler.Pause;
 
     }
 
@@ -41,10 +48,11 @@ public class PauseMenuScript : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        //Player.PlayerInputHandler.Resume();
     }
     public void GoToMainMenu(){
-       // Time.timeScale = 1f;
-       // SceneManager.loadScene()
+        Time.timeScale = 1f;
+       SceneManager.LoadScene("MainMenu");
 
 
     }

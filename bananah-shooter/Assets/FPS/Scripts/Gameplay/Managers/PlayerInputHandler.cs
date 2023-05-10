@@ -36,6 +36,14 @@ namespace Unity.FPS.Gameplay
             Cursor.visible = false;
         }
 
+    public static void Pause(){
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }
+    public static void Resume(){
+        Cursor.lockState = CursorLockMode.None;
+    }
+
         void LateUpdate()
         {
             m_FireInputWasHeld = GetFireInputHeld();
