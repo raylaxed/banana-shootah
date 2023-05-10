@@ -19,7 +19,8 @@ public class StartGame : MonoBehaviour
     public void Go(){
         Time.timeScale = 1f;
        SceneManager.LoadScene("MainScene");
-
-
+    }
+    public void Quit(){
+        Application.Quit();
     }
 }
