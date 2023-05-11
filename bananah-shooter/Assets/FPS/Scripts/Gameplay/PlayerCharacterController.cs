@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+
 namespace Unity.FPS.Gameplay
 {
 
@@ -179,7 +180,15 @@ namespace Unity.FPS.Gameplay
 
         void Update()
         {
+            //GameObject myGameObject = GameObject.Find("Pause Menu Handler");
+           // Debug.Log(myGameObject);
+
+
+
+            //PauseMenuScript c = myGameObject.GetComponent<PauseMenuScript>();
             
+           // PauseMenuScript myScript = myGameObject.GetComponent<PauseMenuScript>();
+           // PauseMenuScript m_Pause = GetComponent<PauseMenuScript>();
             
             //PauseMenuScript pauseManager;
            // pauseManager = GetComponent<PauseMenuScript>();
