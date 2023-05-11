@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         // Check if the player is on the ground
         isGrounded = Physics.CheckSphere(groundCheck.position, 0.1f, groundMask);
 
-        if (isGrounded && velocity.y < 0f)
+        if (!isGrounded && velocity.y < 0f)
         {
             velocity.y = -2f;
         }
