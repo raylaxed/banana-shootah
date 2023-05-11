@@ -3,7 +3,7 @@
  
  public class MouseLook : MonoBehaviour
  {
-     public float mouseSensitivity = 100.0f;
+     public float mouseSensitivity = 200.0f;
      public float clampAngle = 80.0f;
  
      private float rotY = 0.0f; // rotation around the up/y axis

@@ -4985,8 +4985,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187e199b2ab3b0f458ea2cf2a24a0feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 8
+  jumpForce: 10
   gravity: -9.81
+  playerWeight: 10
   groundCheck: {fileID: 2729281214152228947}
   groundMask:
     serializedVersion: 2
@@ -5003,7 +5005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcbaa388b9a26240b343d70e101b896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 200
   clampAngle: 80
 --- !u!4 &2729281214152228947 stripped
 Transform:
