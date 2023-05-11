@@ -23,6 +23,9 @@ namespace Unity.FPS.Gameplay
         GameFlowManager m_GameFlowManager;
         PlayerCharacterController m_PlayerCharacterController;
         bool m_FireInputWasHeld;
+       // GameObject m_PauseMenu; 
+         
+
 
         void Start()
         {
@@ -34,6 +37,8 @@ namespace Unity.FPS.Gameplay
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            //m_PauseMenu = GameObject.Find("Pause Menu Handler");
+            //Debug.Log(m_PauseMenu);
         }
 
     public static void Pause(){
