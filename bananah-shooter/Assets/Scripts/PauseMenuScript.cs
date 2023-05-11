@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
-      public static  bool isPaused;
+   
     public GameObject pauseMenu;
+    public bool isPaused;
 
-  
 
-    
-//GameObject Player;
+
+
+    //GameObject Player;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +60,11 @@ public class PauseMenuScript : MonoBehaviour
 
     public void QuitGame(){
         Application.Quit();
+    }
+
+    public bool checkPause()
+    {
+        return isPaused;
     }
 
 

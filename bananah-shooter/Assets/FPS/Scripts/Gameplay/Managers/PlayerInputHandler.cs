@@ -1,5 +1,9 @@
 ﻿using Unity.FPS.Game;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Unity.FPS.Gameplay
 {
@@ -23,8 +27,10 @@ namespace Unity.FPS.Gameplay
         GameFlowManager m_GameFlowManager;
         PlayerCharacterController m_PlayerCharacterController;
         bool m_FireInputWasHeld;
-       // GameObject m_PauseMenu; 
-         
+        // GameObject m_PauseMenu; 
+
+        public GameObject pauseMenu;
+
 
 
         void Start()
@@ -41,13 +47,14 @@ namespace Unity.FPS.Gameplay
             //Debug.Log(m_PauseMenu);
         }
 
-    public static void Pause(){
-        Cursor.lockState = CursorLockMode.Locked;
+        public static void Pause(){
+            Cursor.lockState = CursorLockMode.Locked;
 
-    }
-    public static void Resume(){
-        Cursor.lockState = CursorLockMode.None;
-    }
+        }
+
+        public static void Resume(){
+            Cursor.lockState = CursorLockMode.None;
+        }
 
         void LateUpdate()
         {
