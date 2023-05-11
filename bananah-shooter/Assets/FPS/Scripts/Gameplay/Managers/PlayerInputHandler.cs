@@ -30,6 +30,7 @@ namespace Unity.FPS.Gameplay
         // GameObject m_PauseMenu; 
 
         public GameObject pauseMenu;
+        
 
 
 
