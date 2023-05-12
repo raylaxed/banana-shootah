@@ -19,13 +19,14 @@ public class DamageGun : MonoBehaviour
 
         Ray gunRay = new Ray(PlayerCamera.position, PlayerCamera.forward);
         Debug.Log(PlayerCamera.position);
-        Debug.Log(PlayerCamera.forward);
+        
         if(Physics.Raycast(gunRay, out RaycastHit hitInfo, BulletRange)){
-            Debug.Log(hitInfo.collider.gameObject.TryGetComponent(out Entity enemy));
-           // if(hitInfo.collider.gameObject.TryGetComponent(out Entity enemy)){
-             //   Debug.Log("GunRay");
-               // enemy.Health -= Damage;
-          //  }
+            Debug.Log(hitInfo.collider);
+            //Debug.Log(hitInfo.collider.gameObject.TryGetComponent(out Entity enemy));
+            if(hitInfo.collider.gameObject.TryGetComponent(out Entity enemy)){
+                Debug.Log("GunRay");
+               enemy.Health -= Damage;
+            }
 
 
         }
