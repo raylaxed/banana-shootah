@@ -336,7 +336,7 @@ GameObject:
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3891163784698469781
 Transform:
   m_ObjectHideFlags: 0
@@ -414,6 +414,7 @@ MonoBehaviour:
   TriggerAxisThreshold: 0.4
   InvertYAxis: 0
   InvertXAxis: 0
+  pauseMenu: {fileID: 0}
 --- !u!114 &814417836257332542
 MonoBehaviour:
   m_ObjectHideFlags: 0
