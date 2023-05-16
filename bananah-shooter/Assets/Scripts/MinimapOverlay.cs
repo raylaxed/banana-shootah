@@ -21,6 +21,6 @@ public class MinimapOverlay : MonoBehaviour
     void OnGUI()
     {
         // Zeichne die Minimap-Textur als Overlay
-        GUI.DrawTexture(new Rect(10, 10, 1720, 200), minimapTexture, ScaleMode.ScaleToFit, false);
+        GUI.DrawTexture(new Rect(10, 10, 1820, 200), minimapTexture, ScaleMode.ScaleToFit, false);
     }
 }
