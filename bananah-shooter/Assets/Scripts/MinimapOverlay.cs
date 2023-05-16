@@ -20,7 +20,17 @@ public class MinimapOverlay : MonoBehaviour
 
     void OnGUI()
     {
+        float minimapSize = Screen.width * 0.2f;  // Define the size of the minimap relative to the screen width
+    float padding = 10f;  // Define the padding from the edges of the screen
+
+    // Calculate the position of the minimap
+    float xPos = padding;
+    float yPos = padding;
+
+    // Draw the minimap texture using the calculated position and size
+    GUI.DrawTexture(new Rect(xPos, yPos, minimapSize, minimapSize), minimapTexture, ScaleMode.ScaleToFit, false);
+
         // Zeichne die Minimap-Textur als Overlay
-        GUI.DrawTexture(new Rect(10, 10, 1820, 200), minimapTexture, ScaleMode.ScaleToFit, false);
+       // GUI.DrawTexture(new Rect(10, 10, 1820, 200), minimapTexture, ScaleMode.ScaleToFit, false);
     }
 }
