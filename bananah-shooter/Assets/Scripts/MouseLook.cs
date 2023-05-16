@@ -1,5 +1,6 @@
  using System;
  using UnityEngine;
+ using System.Collections;
  
  public class MouseLook : MonoBehaviour
  {
@@ -8,7 +9,9 @@
  
      private float rotY = 0.0f; // rotation around the up/y axis
      private float rotX = 0.0f; // rotation around the right/x axis
- 
+
+    public PauseMenuScript pauseMenu;
+
      void Start ()
      {
          Vector3 rot = transform.localRotation.eulerAngles;

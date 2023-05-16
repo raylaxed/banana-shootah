@@ -18,6 +18,7 @@ public class PauseMenuScript : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        Cursor.visible = false;
      //   Player = GameObject.find("Player");
         
     }
@@ -38,6 +39,7 @@ public class PauseMenuScript : MonoBehaviour
 
     public void PauseGame(){
         pauseMenu.SetActive(true);
+        Cursor.visible = true;
         Time.timeScale = 0f;
         isPaused = true;
         //Player.PlayerInputHandler.Pause;
@@ -45,8 +47,8 @@ public class PauseMenuScript : MonoBehaviour
     }
 
     public void ResumeGame() {
-
         pauseMenu.SetActive(false);
+        Cursor.visible = false;
         Time.timeScale = 1f;
         isPaused = false;
         //Player.PlayerInputHandler.Resume();
@@ -60,11 +62,6 @@ public class PauseMenuScript : MonoBehaviour
 
     public void QuitGame(){
         Application.Quit();
-    }
-
-    public bool checkPause()
-    {
-        return isPaused;
     }
 
 
