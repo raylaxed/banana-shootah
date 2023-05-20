@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class Player2Controlls : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 20f;
 
     void Update()
     {
-       if (Input.GetKey(KeyCode.LeftArrow))
+       if (Input.GetKey(KeyCode.LeftArrow) && transform.position.z < 58)
      {
-         transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+         transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
      }
-     if (Input.GetKey(KeyCode.RightArrow))
+     if (Input.GetKey(KeyCode.RightArrow) && transform.position.z > 24)
      {
-         transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+        transform.position += Vector3.back * moveSpeed * Time.deltaTime;
      }
-     if (Input.GetKey(KeyCode.UpArrow))
+     if (Input.GetKey(KeyCode.UpArrow) && transform.position.x < 34)
      {
-         transform.position += Vector3.up * moveSpeed* Time.deltaTime;
+         transform.position += Vector3.right * moveSpeed* Time.deltaTime;
      }
-     if (Input.GetKey(KeyCode.DownArrow))
+     if (Input.GetKey(KeyCode.DownArrow) && transform.position.x > -4.5)
      {
-         transform.position += Vector3.down * moveSpeed * Time.deltaTime;
+        transform.position += Vector3.left * moveSpeed * Time.deltaTime;
      }
     }
 }

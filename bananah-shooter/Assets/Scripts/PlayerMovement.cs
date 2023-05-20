@@ -32,8 +32,29 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Get the horizontal and vertical inputs from the W, A, S, D keys
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
+        //float horizontalInput = Input.GetAxisRaw("Horizontal");
+        //float verticalInput = Input.GetAxisRaw("Vertical");
+
+        float horizontalInput = 0f;
+        float verticalInput = 0f;
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            horizontalInput -= 1f;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+         horizontalInput += 1f;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            verticalInput += 1f;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+          verticalInput -= 1f;
+        }
+
 
         // Calculate the movement direction based on the inputs and the camera's forward direction
         Vector3 forwardDirection = Camera.main.transform.forward;
