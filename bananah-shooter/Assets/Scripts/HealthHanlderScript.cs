@@ -6,8 +6,9 @@ public class HealthHanlderScript : MonoBehaviour
 {
     public GameObject heartPrefab;
     public float heartCount;
-    public float spacing = 1.0f;
+    public float spacing = 100.0f;
     public Transform heartContainer;
+    private List<GameObject> hearts = new List<GameObject>();
 
     void Start()
     {
@@ -35,21 +36,23 @@ public class HealthHanlderScript : MonoBehaviour
     }
  public void RefreshHearts()
 {
-    // Zuerst löschen wir alle vorhandenen Herzen
-    foreach (Transform child in heartContainer)
-    {
-        Destroy(child.gameObject);
-    }
+     // Lösche vorhandene Herzen
+        foreach (GameObject heart in hearts)
+        {
+            Destroy(heart);
+        }
+        hearts.Clear();
 
-    // Dann erstellen wir neue Herzen basierend auf der aktuellen Spieler-Gesundheit
-    for (int i = 0; i < heartCount; i++)
-    {
-        
-        GameObject heart = Instantiate(heartPrefab, heartContainer);
-        Vector3 position = new Vector3(i * spacing, 0f, 0f);
-        heart.transform.localPosition = position;
-        heart.SetActive(true);
-    }
+        // Erstelle neue Herzen basierend auf der aktuellen Gesundheit
+        for (int i = 0; i < heartCount; i++)
+        {
+            GameObject heart = Instantiate(heartPrefab, transform);
+            Vector3 position = new Vector3(i * spacing, 0f, 0f);
+            heart.transform.localPosition = position;
+            heart.SetActive(i < heartCount); // Aktiviere/deaktiviere Herzen basierend auf der aktuellen Gesundheit
+            hearts.Add(heart);
+        }
+    
 }
     
 }
