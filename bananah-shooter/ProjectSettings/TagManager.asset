@@ -17,9 +17,9 @@ TagManager:
   - 
   - FirstPersonWeapon
   - PhysicalAmmo
+  - player
   - 
-  - 
-  - 
+  - walkingPlane
   - 
   - 
   - 
