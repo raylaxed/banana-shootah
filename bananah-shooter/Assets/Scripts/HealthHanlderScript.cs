@@ -6,10 +6,11 @@ public class HealthHanlderScript : MonoBehaviour
 {
     public GameObject heartPrefab;
     public float heartCount;
-    public float spacing = 100.0f;
+    public float spacing = 0.1f;
     public Transform heartContainer;
     private List<GameObject> hearts = new List<GameObject>();
-
+    private float placementX; 
+private float placementY; 
     void Start()
     {
         Entity playerEntity = GameObject.Find("Player").GetComponent<Entity>();
@@ -18,6 +19,8 @@ public class HealthHanlderScript : MonoBehaviour
         Debug.Log("healthStart");
         Debug.Log(heartCount);
         RefreshHearts();
+        placementX =  600 - (Screen.width * 0.2f);
+        placementY = -(Screen.height * 0.6f);
     }
 
     
@@ -46,8 +49,10 @@ public class HealthHanlderScript : MonoBehaviour
         // Erstelle neue Herzen basierend auf der aktuellen Gesundheit
         for (int i = 0; i < heartCount; i++)
         {
+           //
             GameObject heart = Instantiate(heartPrefab, transform);
-            Vector3 position = new Vector3(i * spacing, 0f, 0f);
+            float xPosition = (i * spacing) - placementX; // Scale the spacing relative to the screen width
+            Vector3 position = new Vector3(xPosition, placementY, placementY); // Relative screen scale for vertical position
             heart.transform.localPosition = position;
             heart.SetActive(i < heartCount); // Aktiviere/deaktiviere Herzen basierend auf der aktuellen Gesundheit
             hearts.Add(heart);
