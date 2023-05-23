@@ -20,7 +20,7 @@ private float placementY;
         Debug.Log(heartCount);
         RefreshHearts();
         placementX =  600 - (Screen.width * 0.2f);
-        placementY = -(Screen.height * 0.6f);
+        placementY = -(Screen.height * 0.4f);
     }
 
     
