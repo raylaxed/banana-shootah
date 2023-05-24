@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("PlayerObj").transform;
+        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -82,10 +82,16 @@ public class EnemyAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
+
+
+
+           GameObject playerToDamage = GameObject.Find("Player");
+            playerToDamage.GetComponent<Entity>().Health -= 1;
+            Debug.Log("damaged");
+
+
             ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            
             ///End of attack code
 
             alreadyAttacked = true;
