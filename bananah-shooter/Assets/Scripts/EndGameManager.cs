@@ -24,10 +24,11 @@ public class EndGameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         //check if player is dead
-        if(Player.Health <= 0) {
+
+        if(Player.playerIsDead == true) {
             EndGame();
         }
         
@@ -48,8 +49,11 @@ public class EndGameManager : MonoBehaviour
 
     //void OnPlayerDeath(PlayerDeathEvent evt) => EndGame();
 
-    void EndGame()
+    public void EndGame()
     {
+
+        Debug.Log("eding game");
+        
         // unlocks the cursor before leaving the scene, to be able to click buttons
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
