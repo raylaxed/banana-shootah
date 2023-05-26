@@ -8,7 +8,7 @@ public class EndGameManager : MonoBehaviour
     public float EndSceneLoadDelay = 3f;
     public float DelayBeforeFadeToBlack = 4f;
     public CanvasGroup EndGameFadeCanvasGroup;
-    public string EndScene = "LoseScene";
+    public string EndScene = "MainMenu";
 
     public bool GameIsEnding { get; private set; }
     float m_TimeLoadEndGameScene;
@@ -32,6 +32,7 @@ public class EndGameManager : MonoBehaviour
             EndGame();
         }
         
+        /*
         if (GameIsEnding)
         {
             float timeRatio = 1 - (m_TimeLoadEndGameScene - Time.time) / EndSceneLoadDelay;
@@ -44,7 +45,7 @@ public class EndGameManager : MonoBehaviour
                 SceneManager.LoadScene(m_SceneToLoad);
                 GameIsEnding = false;
             }
-        }
+        }*/
     }
 
     //void OnPlayerDeath(PlayerDeathEvent evt) => EndGame();
@@ -63,5 +64,6 @@ public class EndGameManager : MonoBehaviour
 
         m_SceneToLoad = EndScene;
         m_TimeLoadEndGameScene = Time.time + EndSceneLoadDelay + DelayBeforeFadeToBlack;
+        SceneManager.LoadScene(m_SceneToLoad);
     }
 }
