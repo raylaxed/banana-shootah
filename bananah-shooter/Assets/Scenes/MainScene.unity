@@ -3236,6 +3236,7 @@ MonoBehaviour:
   WalkingPlane:
     serializedVersion: 2
     m_Bits: 16384
+  roundManager: {fileID: 345022071}
 --- !u!1 &1384181288
 GameObject:
   m_ObjectHideFlags: 0
@@ -8248,6 +8249,11 @@ PrefabInstance:
       value: -212.55
       objectReference: {fileID: 0}
     - target: {fileID: 789319387739042073, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1315839542190839936, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: m_Enabled
       value: 0
