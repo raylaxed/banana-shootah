@@ -8,6 +8,7 @@ public class Entity : MonoBehaviour
     [SerializeField] public float StartingHealth;
     [SerializeField] public bool playerIsDead;
     private float health;
+    public ObjectiveManager ObjectiveManager;
 
     public float Health{
         get 
@@ -27,7 +28,12 @@ public class Entity : MonoBehaviour
                   //  gameManager.GetComponent<EndGameManager>().EndGame();
                     // Handle player death
                     Debug.Log("Player died!");
+                } else
+                {
+                    //tells the objective Manager that an Enemy has been detroyed so we can keep track if the round should be over or not
+                    ObjectiveManager.EnemyDestroyed();
                 }
+
                 Destroy(gameObject);
             }
 

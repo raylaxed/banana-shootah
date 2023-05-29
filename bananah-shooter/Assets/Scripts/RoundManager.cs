@@ -8,6 +8,7 @@ public class RoundManager : MonoBehaviour
     public int round {get; private set;}
     public int availableEnemies {get; private set;}
     private int previousEnemies;
+    public SkyBoxChanger SkyBoxChanger;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,14 @@ public class RoundManager : MonoBehaviour
         
     }
 
-    void newRound()
+    public void NewRound()
     {
         round++;
         //amount of available enemies per round is a fibonacci sequence
         int temp = availableEnemies;
         availableEnemies += previousEnemies;
         previousEnemies = temp;
+
+        SkyBoxChanger.ChangeSkybox();
     }
 }
