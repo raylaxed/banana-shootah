@@ -959,17 +959,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skyboxes:
-  - skyboxMaterial: {fileID: 0}
-    lightingSettings: {fileID: 0}
-    directionalLight: {fileID: 3747284965934347122, guid: 9970591f54dcbad478d7b5b598a0dfab,
-      type: 3}
   - skyboxMaterial: {fileID: 2100000, guid: eac2ef371405749e0bd050b4c3272f16, type: 2}
     lightingSettings: {fileID: 4890085278179872738, guid: 897dde323efb3874cbd5a9c40db4045a,
       type: 2}
     directionalLight: {fileID: 1845436855747593181, guid: d885b97fafc5a2a4b89f18a409e4a9e4,
       type: 3}
-  - skyboxMaterial: {fileID: 0}
-    lightingSettings: {fileID: 0}
+  - skyboxMaterial: {fileID: 2100000, guid: 01f4eb1c73693428d923f1520032e7f9, type: 2}
+    lightingSettings: {fileID: 4890085278179872738, guid: 17df7f6889115b44a9e54285c7f96631,
+      type: 2}
     directionalLight: {fileID: 5114540130000612658, guid: 29a8b764c076bf94a8938eb283fa870d,
       type: 3}
   - skyboxMaterial: {fileID: 2100000, guid: c82a334cf5a5e47978749c210cee72a7, type: 2}
