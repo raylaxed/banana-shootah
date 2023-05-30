@@ -959,30 +959,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skyboxes:
-  - skyboxMaterial: {fileID: 2100000, guid: eac2ef371405749e0bd050b4c3272f16, type: 2}
-    lightingSettings: {fileID: 4890085278179872738, guid: 897dde323efb3874cbd5a9c40db4045a,
+  - skyboxMaterial: {fileID: 2100000, guid: cdbb40e11399e4a17882ada20a1b896a, type: 2}
+    lightingSettings: {fileID: 4890085278179872738, guid: 205b5db38bfeba04e96bdffa89037eaa,
       type: 2}
-    directionalLight: {fileID: 1845436855747593181, guid: d885b97fafc5a2a4b89f18a409e4a9e4,
+    directionalLight: {fileID: 4655425868360990429, guid: b904672bb7b885d459130e01d177904c,
       type: 3}
   - skyboxMaterial: {fileID: 2100000, guid: 01f4eb1c73693428d923f1520032e7f9, type: 2}
     lightingSettings: {fileID: 4890085278179872738, guid: 17df7f6889115b44a9e54285c7f96631,
       type: 2}
     directionalLight: {fileID: 5114540130000612658, guid: 29a8b764c076bf94a8938eb283fa870d,
       type: 3}
+  - skyboxMaterial: {fileID: 2100000, guid: fe4e130f9947345a2b213cb5038851a2, type: 2}
+    lightingSettings: {fileID: 4890085278179872738, guid: ad5901709291de34c8f8a75769f04934,
+      type: 2}
+    directionalLight: {fileID: 3186257195475376621, guid: 28f211d924b7c644aaa85d84f8e46ad7,
+      type: 3}
   - skyboxMaterial: {fileID: 2100000, guid: c82a334cf5a5e47978749c210cee72a7, type: 2}
     lightingSettings: {fileID: 4890085278179872738, guid: 681300c6142e5be43a098411a5d515a0,
       type: 2}
     directionalLight: {fileID: 7408708135503627837, guid: e1f8426518b51804785a286ea0d444b3,
       type: 3}
-  - skyboxMaterial: {fileID: 2100000, guid: cdbb40e11399e4a17882ada20a1b896a, type: 2}
-    lightingSettings: {fileID: 4890085278179872738, guid: 205b5db38bfeba04e96bdffa89037eaa,
+  - skyboxMaterial: {fileID: 2100000, guid: eac2ef371405749e0bd050b4c3272f16, type: 2}
+    lightingSettings: {fileID: 4890085278179872738, guid: 897dde323efb3874cbd5a9c40db4045a,
       type: 2}
-    directionalLight: {fileID: 4655425868360990429, guid: b904672bb7b885d459130e01d177904c,
-      type: 3}
-  - skyboxMaterial: {fileID: 2100000, guid: fe4e130f9947345a2b213cb5038851a2, type: 2}
-    lightingSettings: {fileID: 4890085278179872738, guid: ad5901709291de34c8f8a75769f04934,
-      type: 2}
-    directionalLight: {fileID: 3186257195475376621, guid: 28f211d924b7c644aaa85d84f8e46ad7,
+    directionalLight: {fileID: 1845436855747593181, guid: d885b97fafc5a2a4b89f18a409e4a9e4,
       type: 3}
   - skyboxMaterial: {fileID: 2100000, guid: 51b74d7bad397457d883c5940f7664d8, type: 2}
     lightingSettings: {fileID: 4890085278179872738, guid: fea29da2690e6494cbbbafae59e70b3f,
