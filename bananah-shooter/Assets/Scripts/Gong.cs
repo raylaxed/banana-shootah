@@ -6,6 +6,7 @@ public class Gong : MonoBehaviour, Interactible
 {
     public bool canInteract;
     public Animator animator;
+    public RoundManager roundManager;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class Gong : MonoBehaviour, Interactible
     {
         canInteract = false;
         animator.SetTrigger("Ring");
+        roundManager.NewRound();
     }
 
     public bool CanInteract()
@@ -25,5 +27,9 @@ public class Gong : MonoBehaviour, Interactible
         return canInteract;
     }
 
+    public void MakeInteractable()
+    {
+        canInteract = true;
+    }
 
 }

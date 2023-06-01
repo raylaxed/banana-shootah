@@ -945,7 +945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f957c681addbc8d449a71099c8cecc69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RoundManager: {fileID: 345022071}
+  roundManager: {fileID: 0}
+  gong: {fileID: 0}
 --- !u!114 &345022081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,6 +1026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 0
   animator: {fileID: 399893078}
+  roundManager: {fileID: 345022071}
 --- !u!65 &399893076
 BoxCollider:
   m_ObjectHideFlags: 0

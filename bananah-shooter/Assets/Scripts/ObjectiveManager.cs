@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ObjectiveManager : MonoBehaviour
 {
-    public RoundManager RoundManager;
+    public RoundManager roundManager;
+    public Gong gong;
     private int destroyedEnemies;
     
     // Start is called before the first frame update
@@ -13,26 +14,15 @@ public class ObjectiveManager : MonoBehaviour
         destroyedEnemies = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void NewRound()
-    {
-        destroyedEnemies = 0;
-        RoundManager.NewRound();
-    }
-
     // EnemyDestroyed has to be called from the Entity script when an enemy dies
     public void EnemyDestroyed()
     {
         destroyedEnemies++;
 
-        if(destroyedEnemies >= RoundManager.availableEnemies)
+        if(destroyedEnemies >= roundManager.availableEnemies)
         {
-            NewRound();
+            destroyedEnemies = 0;
+            gong.MakeInteractable();
         }
     }
 }
