@@ -7,17 +7,21 @@ public class DamageGun : MonoBehaviour
     public float Damage;
     public float BulletRange;
     private Transform PlayerCamera;
+    private Transform PlayerCameraCamPos;
 
     // Start is called before the first frame update
     void Start()
     {
         PlayerCamera = GameObject.Find("Player").transform;
+        Debug.Log(PlayerCamera.position);
+        PlayerCameraCamPos = GameObject.Find("Main Camera").transform;
+        Debug.Log(PlayerCameraCamPos.position);
     }
     public void Shoot(){
         
 
 
-        Ray gunRay = new Ray(PlayerCamera.position, PlayerCamera.forward);
+        Ray gunRay = new Ray(PlayerCameraCamPos.position, PlayerCameraCamPos.forward);
         Debug.Log(PlayerCamera.position);
         
         if(Physics.Raycast(gunRay, out RaycastHit hitInfo, BulletRange)){

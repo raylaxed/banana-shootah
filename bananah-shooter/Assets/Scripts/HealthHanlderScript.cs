@@ -32,8 +32,8 @@ private float placementY;
         
         Entity playerEntity = GameObject.Find("Player").GetComponent<Entity>();
         heartCount = playerEntity.Health;
-        Debug.Log("healthUpdate");
-        Debug.Log(heartCount);
+        //Debug.Log("healthUpdate");
+       // Debug.Log(heartCount);
         RefreshHearts();
        
     }
