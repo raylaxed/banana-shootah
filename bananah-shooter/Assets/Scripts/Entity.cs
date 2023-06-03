@@ -5,8 +5,8 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
 
-    [SerializeField] public float StartingHealth;
-    [SerializeField] public bool playerIsDead;
+    public float StartingHealth;
+    public bool playerIsDead;
     private float health;
     public ObjectiveManager ObjectiveManager;
 

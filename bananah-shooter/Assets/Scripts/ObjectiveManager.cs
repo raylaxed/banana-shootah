@@ -7,6 +7,8 @@ public class ObjectiveManager : MonoBehaviour
     public RoundManager roundManager;
     public Gong gong;
     private int destroyedEnemies;
+
+    public UIUpdater uIUpdater;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,8 @@ public class ObjectiveManager : MonoBehaviour
         {
             destroyedEnemies = 0;
             gong.MakeInteractable();
+          
+            uIUpdater.UpdateObjectiveAllEnemiesDestroyed();
         }
     }
 }

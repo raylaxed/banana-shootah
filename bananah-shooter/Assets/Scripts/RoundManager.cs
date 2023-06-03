@@ -8,20 +8,17 @@ public class RoundManager : MonoBehaviour
     public int round {get; private set;}
     public int availableEnemies {get; private set;}
     private int previousEnemies;
+
     public SkyBoxChanger SkyBoxChanger;
+    public EnemySpawner EnemySpawner;
+    public UIUpdater uIUpdater;
 
     // Start is called before the first frame update
     void Start()
     {
-        round = 1;
-        availableEnemies = 2;
+        round = 0;
+        availableEnemies = 1;
         previousEnemies = 1;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void NewRound()
@@ -33,5 +30,7 @@ public class RoundManager : MonoBehaviour
         previousEnemies = temp;
 
         SkyBoxChanger.ChangeSkybox();
+        EnemySpawner.NewRound();
+        uIUpdater.UpdateObjectiveNewRound();
     }
 }

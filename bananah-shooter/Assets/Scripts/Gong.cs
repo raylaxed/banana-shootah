@@ -7,7 +7,7 @@ public class Gong : MonoBehaviour, Interactible
     public bool canInteract;
     public Animator animator;
     public RoundManager roundManager;
-     private GameObject gongSound;
+    private GameObject gongSound;
 
     // Start is called before the first frame update
     void Start()

@@ -8,14 +8,11 @@ public class EnemySpawner : MonoBehaviour
     public GameObject Enemy;
     public GameObject SpawnLocation;
     public LayerMask WalkingPlane;
-    public RoundManager roundManager;
-    private int counter;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        NewRound();
-    }
+    public RoundManager roundManager;
+    public UIUpdater uIUpdater;
+    
+    private int counter = 0;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             //only spawn enemies when you have more available
-            if(counter < roundManager.availableEnemies)
+            if(counter < roundManager.availableEnemies && roundManager.round > 0)
             {
                 Spawn();
             } else
@@ -41,14 +38,18 @@ public class EnemySpawner : MonoBehaviour
         {
             GameObject newEnemy = Instantiate(Enemy, hit.point, Quaternion.Euler(0,0,0));
             counter++;
+
+            //updates UI on screen
+            uIUpdater.UpdateEnemyInfo(roundManager.availableEnemies -  counter);
         } else
         {
             Debug.LogWarning("Failed to spawn object. No ground detected.");
         }
     }
 
-    void NewRound()
+    public void NewRound()
     {
         counter = 0;
+        uIUpdater.UpdateEnemyInfo(roundManager.availableEnemies);
     }
 }
