@@ -23,13 +23,17 @@ public class RoundManager : MonoBehaviour
 
     public void NewRound()
     {
-        round++;
         //amount of available enemies per round is a fibonacci sequence
         int temp = availableEnemies;
         availableEnemies += previousEnemies;
         previousEnemies = temp;
 
-        SkyBoxChanger.ChangeSkybox();
+        if (round > 0)
+        {
+            SkyBoxChanger.ChangeSkybox();
+        }
+        round++;
+        
         EnemySpawner.NewRound();
         uIUpdater.UpdateObjectiveNewRound();
     }

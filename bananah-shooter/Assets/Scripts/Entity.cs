@@ -9,6 +9,7 @@ public class Entity : MonoBehaviour
     public bool playerIsDead;
     private float health;
     public ObjectiveManager ObjectiveManager;
+    public GameObject particleSystem;
 
     public float Health{
         get 
@@ -32,6 +33,8 @@ public class Entity : MonoBehaviour
                 {
                     //tells the objective Manager that an Enemy has been detroyed so we can keep track if the round should be over or not
                     ObjectiveManager.EnemyDestroyed();
+                    // Spawns Particle System that destroys itself after the particles are all done doing their job
+
                 }
 
                 Destroy(gameObject);

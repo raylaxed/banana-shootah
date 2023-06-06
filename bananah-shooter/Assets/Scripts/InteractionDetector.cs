@@ -6,6 +6,7 @@ using UnityEngine;
 public class InteractionDetector : MonoBehaviour
 {
     private List<Interactible> interactiblesInRange = new List<Interactible>();
+    public UIUpdater updater;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +19,7 @@ public class InteractionDetector : MonoBehaviour
             if(!interactible.CanInteract())
             {
                 interactiblesInRange.Remove(interactible);
+                updater.HideInteract();
             }
         }
     }
@@ -29,6 +31,7 @@ public class InteractionDetector : MonoBehaviour
         if(interactible != null && interactible.CanInteract())
         {
             interactiblesInRange.Add(interactible);
+            updater.ShowInteract("(F) " + interactible.GetInteractionInfo());
         }
     }
 
@@ -39,6 +42,7 @@ public class InteractionDetector : MonoBehaviour
         if(interactiblesInRange.Contains(interactible))
         {
             interactiblesInRange.Remove(interactible);
+            updater.HideInteract();
         }
 
     }
