@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
-    
+    public Animator animator;
 
     //Patroling
     public Vector3 walkPoint;
@@ -83,9 +83,9 @@ public class EnemyAI : MonoBehaviour
         if (!alreadyAttacked)
         {
 
+            animator.SetTrigger("Attack");
 
-
-           GameObject playerToDamage = GameObject.Find("Player");
+            GameObject playerToDamage = GameObject.Find("Player");
             playerToDamage.GetComponent<Entity>().Health -= 1;
             Debug.Log("damaged");
 

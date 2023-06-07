@@ -8,7 +8,7 @@ public class EndGameManager : MonoBehaviour
     public float EndSceneLoadDelay = 3f;
     public float DelayBeforeFadeToBlack = 4f;
     public CanvasGroup EndGameFadeCanvasGroup;
-    public string EndScene = "MainMenu";
+    public string EndScene = "EndScreen";
 
     public bool GameIsEnding { get; private set; }
     float m_TimeLoadEndGameScene;
