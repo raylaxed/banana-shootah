@@ -6,6 +6,7 @@ public class Gun : MonoBehaviour
 
     public UnityEvent OnGunShoot;
     public float FireCooldown;
+    public AudioSource gunShot;
 
     private float CurrentCooldown;
     // Start is called before the first frame update
@@ -24,7 +25,7 @@ public class Gun : MonoBehaviour
                 Debug.Log(CurrentCooldown);
                 OnGunShoot?.Invoke();
                 CurrentCooldown = FireCooldown;
-
+                gunShot.Play();
             }
 
         }
