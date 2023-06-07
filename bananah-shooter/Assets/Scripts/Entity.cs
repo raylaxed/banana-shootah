@@ -34,7 +34,7 @@ public class Entity : MonoBehaviour
                     //tells the objective Manager that an Enemy has been detroyed so we can keep track if the round should be over or not
                     ObjectiveManager.EnemyDestroyed();
                     // Spawns Particle System that destroys itself after the particles are all done doing their job
-
+                    Instantiate(particleSystem, transform.position, Quaternion.identity);
                 }
 
                 Destroy(gameObject);
