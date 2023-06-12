@@ -12,6 +12,9 @@ public class EnemyAI : MonoBehaviour
 
     public Animator animator;
 
+    private AudioSource monkeySound;
+
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -30,6 +33,8 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        monkeySound = GetComponent<AudioSource>();
+
     }
 
     private void Update()
@@ -70,6 +75,12 @@ public class EnemyAI : MonoBehaviour
 
     private void ChasePlayer()
     {
+        //play sound 
+        if (!monkeySound.isPlaying)
+ {
+     monkeySound.Play();
+ }
+       
         agent.SetDestination(player.position);
     }
 
