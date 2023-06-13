@@ -51,7 +51,7 @@ public class SkyBoxChanger : MonoBehaviour
         // Change the skybox material
         RenderSettings.skybox = skyboxes[index].skyboxMaterial;
         //Change lighting Settings
-        Lightmapping.lightingSettings = skyboxes[index].lightingSettings;
+     //   Lightmapping.lightingSettings = skyboxes[index].lightingSettings;
 
         // Change Directional Light
         GameObject newDirectionalLight = skyboxes[index].directionalLight;
